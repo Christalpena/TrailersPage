@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+body{
+    background-color: black;
+}
+#bar{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 10px;
+}
+header {
+	        
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 22%, rgba(255,4,4,0.7990546560421043) 62%, rgba(39,24,124,1) 100%);
+	color: white;
+    display: block;
+    overflow-x:auto;
+    margin: -8px;
+    
+    
+}
+
+.title{
+    text-align: center;
+    font-family: "Oswald",sans-serif;
+    font-size: 30px;
+    font-weight: 250;
+    background-size: 100%;
+}
+
+.navbar {
+    text-align: center;
+
+}
+
+.navbar > div .form-contro{
+    border-radius: 10px;
+}
+footer{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 22%, rgba(255,4,4,0.7990546560421043) 62%, rgba(39,24,124,1) 100%);
+
+    padding: 60px 0 30px 0;
+    overflow: hidden;
+    margin-top: 10em;
+    margin-top: 30px;
+    background-size: cover;
+
+    font-family: "Oswald",sans-serif;
+    margin-bottom: 0;
+}
+
+.container_footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 3px solid  black;
+    margin-bottom: -10rem;
+
+}
+
+.content-footer{
+    text-align: center;
+
+}
+
+.content-footer h4{
+    color: white;
+    border-bottom: 3px solid ;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    
+}
+
+.content-footer p{
+    color: white;
+}
+
+.last-titule{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: white;
+}
+
+#bar a{
+    color: white;
+    margin: 0 20px;
+    font-family: "Oswald",sans-serif;
+    text-decoration: none;
+    display: inline-block;
+}
+.form-control{
+border-radius: 20px;
+border-color: transparent;
+margin-bottom: 10px;
+width: 20rem;
+height: 30px;
+margin-left: -60px;
+}
+
+.btn{
+border-radius: 30px;
+border-color: transparent;
+width: 55px;
+height: 55px;
+position:absolute;
+margin-top: -1rem;
+margin-left: 10px;
+}
+
+.img-btn{
+width: 40px;
+height: 40px;
+border-radius: 20px;
+
+
+}
+
+@media screen and (max-width: 412px){
+footer{
+    width: 27.5rem;
+}
+
+header{
+    width: 27.5rem;
+}
+
+.btn{
+    width: 45px;
+    height: 45px;
+    margin-left: 2px;
+    margin-top: -8px;
+}
+
+.img-btn{
+width: 30px;
+height: 30px;        
+}
+
+}

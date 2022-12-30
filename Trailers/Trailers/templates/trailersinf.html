@@ -1,0 +1,156 @@
+{% extends "headerAndfooter.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+        Trailer Information
+    {% endblock %}
+
+<header>
+    {% block h3 %}
+        <h3 class="title">{{trailer.title}}</h3> 
+    {% endblock %}
+</header>
+</head>
+<body>
+    {% block content %}  
+    <div class="fathercontainer">
+        <div class="cont2">
+            <img class="img" src={{trailer.img_link}} alt="">
+        </div>
+
+        <div style="color: white;" class="infcontainer">
+            <ul id="inf">
+                <h3>Title</h3>
+                <li>{{trailer.title}}</li>
+                <h3>Category</h3>
+                <li>{{trailer.category}}</li>
+                <h3>Year</h3>
+                <li>{{trailer.year}}</li>
+                <h3>Director</h3>
+                <li>{{trailer.director}}</li>
+                <h3>Actors</h3>
+                <li>{{trailer.actors}}</li>
+                <h3>Review</h3>
+                <li>{{trailer.review}} starts</li>
+                <h3>YouTube Link</h3>
+                <li>{{trailer.link}}</li>
+                <p></p>
+
+            </ul>
+            
+            
+        </div>
+    </div>
+
+
+    <style>      
+
+        .img{
+            width: 530px;
+            height: 740px;
+        }
+    
+
+        .fathercontainer{
+            margin-top: 30px;
+            margin-bottom: 7rem;
+            
+        }
+
+        .cont2{
+            padding: 0;
+            margin-left: 20rem;
+        }
+
+
+
+
+        #inf{
+          margin-top: -40rem;
+          padding: 0;
+          margin-left: 28rem;
+          
+
+
+          
+        }
+
+        #inf li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+           
+            
+        }
+
+        #inf h3{
+            color: red;
+            text-align: center;
+            text-transform: uppercase;
+            
+        }
+
+        @media screen and (max-width:1263px){
+            #inf{
+                margin: 0;
+                margin-left: 0;
+            }
+
+            .cont2{
+                text-align: center;
+                margin-left: 0;
+            }
+            #inf{
+                background-color: transparent;
+            }
+
+            #inf li{
+                color: white;
+            }
+        }
+
+        @media screen and (max-width:513px){
+            .img{
+                width: 20rem;
+                
+            }
+            .fathercontainer{
+                margin-left: 3rem;
+            }
+            .cont2{
+                width: 20rem;
+            }
+        }
+
+
+        
+
+
+
+       
+
+
+       
+
+
+    
+    
+
+    </style>
+
+
+
+
+    {% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+{% extends "headerAndfooter.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+
+    {% endblock %}
+</head>
+<body>
+
+    {% block content %}
+    <div class="trailers">
+    {% for category in ctg %}
+        <div class="card">
+            <div class="img">
+                <img class="front" src={{category.img_link}} alt="">
+            </div>
+            <div class="card-body">
+                <a href="{% url 'trailersinf' category.title %}" class="inf">{{category.title}}</a>
+                
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+        <style>
+    
+    
+            .img{
+                margin-top: 10px;
+                margin-left: 12px;
+                width: 255px;
+            }
+    
+           .front{
+    
+                width: 255px;
+                height: 280px;
+    
+            }
+            .card{
+                background: rgb(34,30,103);
+                background:linear-gradient(90deg, rgba(108,11,11,1) 0%, rgba(0,0,0,1) 50%, rgba(108,11,11,1) 100%);
+    
+                width: 280px;
+                height: 350px;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 25px;
+                display: inline-block;
+            }
+    
+            .inf{
+                margin-top: 0;
+                margin-left: 10px;
+                margin-right: 10px;
+                text-align: center;
+                text-transform: capitalize;
+            }
+    
+            .trailers{
+                text-align: center;
+            }
+    
+            .card-body a {
+                text-decoration: none;
+                color: white;
+                font-family: "Oswald",sans-serif;
+            }
+           
+    
+        </style>
+    {% endblock %}
+    
+</body>
+</html>

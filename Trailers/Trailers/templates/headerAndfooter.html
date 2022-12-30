@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <link rel="stylesheet" href='{% static "css/headerAndfooter.css" %}'>
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+
+<header>
+    {% block h3 %}
+    <h3 style="margin-bottom: 10px;" class="title">TRAILERNEMA</h3>
+    {% endblock %}
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <form class="d-flex" role="search" method="GET" action="/searchpageresult/">
+          <input class="form-control" type="search" name="search" placeholder="Search" aria-label="Search">
+          <button class="btn" type="submit" ><img class="img-btn" src='{% static "images/search.png" %}' alt=""></button>
+        </form>
+      </div>
+    </nav>
+    <ul id="bar">
+        <a href="{% url 'trailerspage' %}"><li>Home</li></a>
+        <a href="#"name='terror' ><li>Terror</li></a>
+        <a href="#"><li name = 'romance'>Romance</li></a>
+        <a href="#"><li name = 'action'>Action</li></a>
+        <a href="#"><li name = 'fantaci'>Fantaci</li></a>
+        <a href="#"><li name = 'sport'>sport</li></a>
+
+    </ul>
+
+
+</header>
+<body>
+    {%block content %}
+
+
+
+    {% endblock %}
+
+</body>
+<footer>
+    <div class="container_footer">
+      <div class="content-footer">
+        <h4>GMAIL</h4>
+        <p>christalperez0@gmail.com</p>
+      </div>
+      <div class="content-footer">
+        <h4>PHONE</h4>
+        <p>809-879-5133</p>
+      </div>
+      <div class="content-footer">
+        <h4>LOCATION</h4>
+        <p>Republica Dominicana</p>
+      </div>
+    </div>
+    <h2 class="last-titule">&copy; Christal developer | Christal Perez</h2>
+  </footer>
+</html>

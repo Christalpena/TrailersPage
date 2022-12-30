@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: black;
+    --text-color: white;
+}
+
+
+
+.wrapper{
+    display: grid;
+    place-content: center;
+    min-height: 50vh;
+    font-family: "Oswald",sans-serif;
+    font-size: clamp(1.5rem,1rem + 18vw,15rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--text-color);
+    
+}
+
+.wrapper > div{
+    grid-area: 1/1/-1/-1;
+
+}
+
+.top{
+    text-shadow: 2px 2px 5px red, 2px -2px 5px red;
+    -webkit-text-stroke: 2px red;
+    position: relative;
+    right: -30%;
+}
+
+.botton{
+    -webkit-text-stroke: 3px black;
+    position: relative;
+    right: -45%;
+    bottom: -30%;
+    clip-path: polygon(0% 0%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(350deg, rgb(14, 14, 160) 53%, var(--text-color) 75%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: translate(-0.02em);
+}
+
+
+
+
+.button{
+    position: relative;
+    right: 50%;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+.Go{
+    position:absolute;
+    right: 25%;
+    bottom: 15rem;
+
+    background: -webkit-linear-gradient(350deg, red 53%, var(--text-color) 75%);
+    border-radius:  1.625rem;
+    
+}
+button.Go{
+    width: 12rem;
+}
+
+button.Go .circle{
+    transition: all 0.45s cubic-bezier(0.65,0,0.076,1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    right: 9px;
+    background: white;
+    border-radius: 1.625rem;
+}
+
+button.Go .icon{
+    transition: all 0.45s cubic-bezier(0.65,0,0.076,1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.Go .circle .icon.arrow{
+    transition: all 0.45s cubic-bezier(0.65,0,0.076,1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+
+}
+
+button.Go .circle .icon.arrow::before{
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    height: 0.625rem;
+    right: 0.0625rem;
+    width:0.625rem ;
+    border-top: 0.125rem solid red;
+    border-right: 0.125rem solid red;
+    transform: rotate(45deg);
+
+}
+
+button.Go .button-text{
+    transition: all 0.45 cubic-bezier(0.65,0,0.076,1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0 ;
+    margin: 0 0 0 1.85rem;
+    color: transparent;
+    font-weight: 700;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+button:hover .circle{
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow{
+    background: red;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text{
+    color: red;
+    font-size: medium;
+}
