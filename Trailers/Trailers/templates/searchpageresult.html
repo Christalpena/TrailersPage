@@ -20,6 +20,7 @@
     
 {% block content %}
 <div class="container">
+{% if data %}
 {% for trailers in data %}
     <div class="card">
         <div class="img">
@@ -31,6 +32,9 @@
         </div>
     </div>
 {% endfor %}
+{% else %}
+<h3 style="color: white; margin-top: 10rem;margin-bottom: 10rem;">THIS TRAILER IS NOT ADDED</h3>
+{% endif %}
 </div>
     <style>
 
