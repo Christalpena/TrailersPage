@@ -20,6 +20,8 @@
     
 {% block content %}
 <div class="container">
+
+{% if data %}
 {% for trailers in data %}
     <div class="card">
         <div class="img">
@@ -30,7 +32,14 @@
             
         </div>
     </div>
+
+
+
 {% endfor %}
+
+{% else %}
+<h3 style="color: white; margin-top: 15rem; margin-bottom: 15rem;">THIS TRAILER IS NOT ADDED </h3>
+{% endif %}
 </div>
     <style>
 
@@ -45,7 +54,7 @@
        .front{
 
             width: 245px;
-            height: 290px;
+            height: 320px;
 
         }
         .card{
@@ -53,7 +62,7 @@
             background:linear-gradient(90deg, rgba(108,11,11,1) 0%, rgba(0,0,0,1) 50%, rgba(108,11,11,1) 100%);
 
             width: 280px;
-            height: 370px;
+            height: 390px;
             margin-left: 20px;
             margin-right: 20px;
             margin-top: 25px;

@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 
-    <link rel="stylesheet" href='{% static "css/headerAndfooter.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "css/headerAndfooter.css" %}?1.0' media="all">
+    
     <title>
         {% block title %}
         {% endblock %}
@@ -28,13 +29,11 @@
       </div>
     </nav>
     <ul id="bar">
-        <a href="{% url 'trailerspage' %}"><li>Home</li></a>
-        <a href="#"name='terror' ><li>Terror</li></a>
-        <a href="#"><li name = 'romance'>Romance</li></a>
-        <a href="#"><li name = 'action'>Action</li></a>
-        <a href="#"><li name = 'fantaci'>Fantaci</li></a>
-        <a href="#"><li name = 'sport'>sport</li></a>
-
+        <li><a href="{% url 'trailerspage' %}"> Home</a></li>
+        <li><a href="{% url 'Romance'%}" >Romance</a></li>
+        <li><a href="{% url 'Action' %}">Action</a></li>
+        <li><a href="{% url 'Fantasy' %}">Fantasy</a></li>
+        <li><a href="{% url 'Suspense' %}">Suspense</a></li>
     </ul>
 
 
@@ -55,7 +54,7 @@
       </div>
       <div class="content-footer">
         <h4>PHONE</h4>
-        <p>809-879-5133</p>
+        <p></p>
       </div>
       <div class="content-footer">
         <h4>LOCATION</h4>

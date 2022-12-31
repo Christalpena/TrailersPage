@@ -15,12 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from TrailersPage.views import trailerspage,trailersinf,search
+from TrailersPage.views import trailerspage,trailersinf,search,romancetrailers,actiontrailers,fantasytrailers,suspensetrailers
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('trailerspage/',trailerspage, name = "trailerspage"),
     path('searchpageresult/',search, name="filterTrailers"),
     path('trailerinf/<str:title>',trailersinf,name= "trailersinf"),
+    path('RomanceTrailers/',romancetrailers, name="Romance"),
+    path('ActionTrailers/',actiontrailers, name="Action"),
+    path('FantasyTrailers/',fantasytrailers, name="Fantasy"),
+    path('SportsTrailers/',suspensetrailers, name="Suspense"),
 
 ]
